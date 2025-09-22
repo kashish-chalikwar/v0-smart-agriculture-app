@@ -10,6 +10,7 @@ import { AIChatbot } from "@/components/ai-chatbot"
 import { Marketplace } from "@/components/marketplace"
 import { GamifiedRoadmap } from "@/components/gamified-roadmap"
 import { BottomNavigation } from "@/components/bottom-navigation"
+import InstallPrompt from "@/components/install-prompt"
 
 export default function SmartAgricultureApp() {
   const [currentScreen, setCurrentScreen] = useState("onboarding")
@@ -59,6 +60,7 @@ export default function SmartAgricultureApp() {
       <div className="max-w-md mx-auto bg-background min-h-screen relative">
         {renderScreen()}
         {isLoggedIn && <BottomNavigation currentScreen={currentScreen} onNavigate={setCurrentScreen} />}
+        <InstallPrompt />
       </div>
     </div>
   )
